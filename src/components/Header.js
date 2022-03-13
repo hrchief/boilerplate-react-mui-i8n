@@ -11,7 +11,7 @@ import Menu from "@mui/material/Menu";
 import { useSelector } from "react-redux";
 import { isAuthenticatedSelector } from "../features/user/userSlice";
 
-export default function Header() {
+export default function Header({handleChangeLanguage}) {
   const [anchorEl, setAnchorEl] = useState(null);
   const isAuthenticated = useSelector(isAuthenticatedSelector);
 
@@ -19,8 +19,9 @@ export default function Header() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (lang) => {
     setAnchorEl(null);
+    handleChangeLanguage(lang);
   };
 
   return (
@@ -64,8 +65,9 @@ export default function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={() => handleClose("EN")}>EN</MenuItem>
+                <MenuItem onClick={() => handleClose("DE")}>DE</MenuItem>
+                <MenuItem onClick={() => handleClose("FR")}>FR</MenuItem>
               </Menu>
             </div>
           )}

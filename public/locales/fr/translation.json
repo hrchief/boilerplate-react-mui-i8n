@@ -1,0 +1,8 @@
+{
+    "app_name": "React Passe-partout",
+    "app_description": "Ceci est l'application ReactJS avec Mui v5, React Hook et I18NEXT",
+    "btn_error": "Erreur",
+    "btn_Warning": "Attention",
+    "btn_Success": "Succès",
+    "btn_Info": "Info"
+}

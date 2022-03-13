@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+
+// Material UI Components
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,10 +12,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import { useSelector } from "react-redux";
+
+// Self defined
 import { isAuthenticatedSelector } from "../features/user/userSlice";
 
-export default function Header({handleChangeLanguage}) {
+export default function Header({ handleChangeLanguage }) {
+  const { t } = useTranslation();
+
   const [anchorEl, setAnchorEl] = useState(null);
   const isAuthenticated = useSelector(isAuthenticatedSelector);
 
@@ -37,7 +44,7 @@ export default function Header({handleChangeLanguage}) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Material UI 5
+            {t('app_name')}
           </Typography>
           {isAuthenticated && (
             <div>

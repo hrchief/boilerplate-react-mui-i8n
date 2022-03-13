@@ -1,8 +1,8 @@
 {
-    "title": {
-        "t": "Welcome to the new World of ReactJS Application"
-    },
-    "text2": {
-        "t": "This is ReactJS application with React with React Hook and I18NEXT"
-    }
+    "app_name": "React Kesselplatte",
+    "app_description": "Dies ist die ReactJS-Anwendung mit Mui v5, React Hook und I18NEXT",
+    "btn_error": "Error",
+    "btn_Warning": "Warnung",
+    "btn_Success": "Erfolg",
+    "btn_Info": "Info"
 }

@@ -5,17 +5,19 @@ import { RecoilRoot } from "recoil";
 import { CssBaseline, StyledEngineProvider } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { useTranslation } from "react-i18next";
+
+// Self defined components
 import Notifications from "./components/Notifications";
 import Header from "./components/Header";
+
 import NotistackProvider from "./providers/NotistackProvider";
 import Routes from "./routes";
 import store from "./store";
 import theme from "./theme/theme";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   function handleChangeLanguage(lang) {
-    console.log(lang);
     i18n.changeLanguage(lang);
   }
   return (

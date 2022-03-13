@@ -1,0 +1,8 @@
+{
+    "app_name": "React Boilerplate",
+    "app_description": "This is ReactJS application with Mui v5, React Hook and I18NEXT",
+    "btn_error": "Error",
+    "btn_Warning": "Warning",
+    "btn_Success": "Success",
+    "btn_Info": "Info"
+}

@@ -1,7 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Button, Grid, Paper, Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+
+// MUI Components
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+// Self defined
 import {
   notifyError,
   notifyInfo,
@@ -10,11 +19,11 @@ import {
 } from "../features/notifications/notificationsSlice";
 
 const HomeView = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   return (
     <Paper>
-      <Typography variant="h3">Home Page</Typography>
-
+      <Typography>{t('app_description')}</Typography>
       <Grid container spacing={2}>
         <Grid item>
           <Button
